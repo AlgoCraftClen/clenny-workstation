@@ -65,3 +65,17 @@ Tracker-entered records are authoritative. Never alter or delete them merely to 
 - SHP #5 has no sales, so current safe withdrawal is $0 for both.
 - Current projected baseline after sellout and reserving the next equal shipment: Clenny $2,732.57; Clanny $5,614.43. Independently verify it.
 - Recent relevant commits: `5d2ae43` and `13d95f4`.
+
+## Next Session Priority — Bidirectional Shared-Database Synchronization
+
+The mobile CC Tracker and Clenny Workstation are two interfaces over one authoritative Supabase ledger. The next session must audit first, then design and implement complete bidirectional synchronization:
+
+- Mobile entries must update the workstation automatically.
+- Workstation entries must update the mobile tracker automatically.
+- Shipments, sales, operations, withdrawals, reimbursements, and capital adjustments must be first-class shared database records—not hard-coded in one app or stored only in browser preferences.
+- Replace the workstation-only Shipment #4 → #5 $50.63 classification with a shared, auditable capital-adjustment record while preserving all existing tracker-entered data.
+- Add secure real-time subscriptions for both apps, with manual refresh and bounded polling as recovery fallbacks.
+- Audit RLS, authentication, session refresh, validation, duplicate prevention, conflict behavior, offline/error states, and deployed-version parity.
+- Test read-only first. Do not create production test transactions or alter authoritative records without Clenny’s explicit approval at action time.
+- Prove both directions end to end: mobile → database → workstation and workstation → database → mobile.
+
