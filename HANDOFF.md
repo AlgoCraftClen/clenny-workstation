@@ -1,6 +1,6 @@
 # Clenny Workstation Handoff
 
-Updated: 2026-08-31
+Updated: 2026-09-01
 
 ## NEXT SESSION — MANDATORY FULL AUDIT
 
@@ -63,7 +63,11 @@ Tracker-entered records are authoritative. Never alter or delete them merely to 
 - Inventory: SHP #1–#4 = 0 remaining; SHP #5 = 1,620
 - SHP #5: Clenny 33.04% / 535 cans; Clanny 66.96% / 1,084 cans; company 1 can
 - SHP #5 has no sales, so current safe withdrawal is $0 for both.
-- Current projected baseline after sellout and reserving the next equal shipment: Clenny $2,732.57; Clanny $5,614.43. Independently verify it.
+- Current safe withdrawal: Clenny $0.00; Clanny $0.00.
+- SHP #5 projected rolled capital: Clenny $5,714.57; Clanny $11,578.43; company $12.00.
+- Next equal-shipment reserve uses SHP #5's exact investment basis: Clenny $2,955.85; Clanny $5,990.15.
+- Correct projected excess after that reserve: Clenny $2,758.72; Clanny $5,588.28. The superseded $2,732.57 / $5,614.43 figures used a forbidden fixed one-third/two-thirds reserve.
+- SHP #4 actual-price settlement: Clenny $2,905.22; Clanny $13,785.96; company $23.81. SHP #5 therefore includes $50.63 of additional Clenny capital.
 - Recent relevant commits: `5d2ae43` and `13d95f4`.
 
 ## Next Session Priority — Bidirectional Shared-Database Synchronization
