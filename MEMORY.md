@@ -2,6 +2,16 @@
 
 Updated: 2026-09-01
 
+## Workstation Design Contract
+
+- The responsive shell must never create page-level horizontal scrolling. On small screens, only wide comparison tables may scroll inside their own clearly labeled container.
+- The overview leads with the active shipment, realized “can withdraw now” amounts, and the next meeting decision. Lifetime totals are secondary.
+- The meeting case mix is a local draft, not a production record. Preserve it across refreshes, show each partner's reserve/shortage/excess, and do not call the decision ready unless both partners have a nonzero affordable mix.
+- Describe storage accurately: Supabase holds shared business records; GitHub hosts application code; local browser storage holds the session, meeting draft, and preferences.
+- Replacement imports are disabled. Refresh and backup must never overwrite authoritative Tracker records.
+- Integrity status must name every check and expose the affected shipment and numerical delta when a check fails. Never show green checks beside a generic “Review” badge.
+- Production access must show session state and provide sign-out and expired-session recovery. First-account creation is not part of the normal production login screen.
+
 These are durable rules unless Clenny explicitly changes them.
 
 ## Next Session

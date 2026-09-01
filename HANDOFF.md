@@ -2,6 +2,20 @@
 
 Updated: 2026-09-01
 
+## DESIGN CORRECTIONS COMPLETED
+
+The approved Clenny Workstation design pass was completed on 2026-09-01 without changing production records or accounting formulas.
+
+- Repaired the conflicting tablet/mobile layout rules that collapsed the content column and caused page-level horizontal scrolling.
+- Limited horizontal scrolling to comparison tables and added a visible mobile swipe hint.
+- Put the active shipment, realized partner withdrawals, and next meeting decision ahead of lifetime totals.
+- Moved the next-shipment planner ahead of historical ownership details, enlarged mobile inputs, added one-box shortcuts, persisted the meeting draft locally, and distinguished pending, ready, and capital-short states.
+- Replaced false browser-only privacy and replacement-import wording with the actual shared Supabase data model; replacement imports remain unavailable.
+- Replaced contradictory integrity indicators with named checks and exact shipment/delta explanations. The UI now surfaces the pre-existing SHP #1 investment-basis difference instead of implying that every check passes.
+- Added visible session state, expiry context, explicit sign-out, and a clearer expired-session sign-in path; removed first-account creation from the normal production login flow.
+
+The authoritative baseline remains 5 shipments, 46 operations, 20 sales, and 1,620 cans remaining in SHP #5. No production transaction was added, edited, imported, or deleted during this design work.
+
 ## NEXT SESSION — DESIGN FLAWS
 
 The full read-only audit was completed on 2026-09-01. The next session should begin with the Workstation design flaws already identified, especially responsive layout, horizontal scrolling, misleading privacy/import copy, integrity-status clarity, authentication/session controls, and the information hierarchy around ownership and capital.
