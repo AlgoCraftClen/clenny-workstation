@@ -136,4 +136,4 @@ renderScenario();if(session?.access_token){el('authGate').classList.add('hidden'
   var baseRenderFinal=render;render=function(){baseRenderFinal();var latest=state.shipments.at(-1);if(latest){el('currentInventory').textContent=remainingCans(latest).toLocaleString()+' cans remaining';el('currentInventoryNote').textContent='SHP #'+latest.shortSeq+' · '+esc(latest.lines.map(function(l){return l.product}).join(' + '));el('overviewWithdrawClenny').textContent=el('withdrawClennyNow').textContent;el('overviewWithdrawClanny').textContent=el('withdrawClannyNow').textContent;el('overviewDecisionStatus').textContent=el('nextShipmentDecisionStatus').textContent}renderCapitalAdjustments();integrityRows();updateSessionUi()};
   document.getElementById('auditRefreshBtn').onclick=loadAll;document.getElementById('auditExportBtn').onclick=function(){el('exportBtn').click()};el('exportBtn').textContent='Download backup';updateSessionUi();setTimeout(function(){if(state.shipments.length)render()},0);
 })();
-</script><script src="workstation-experience.js"></script></body></html>
+</script></body></html>
