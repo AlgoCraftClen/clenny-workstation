@@ -106,3 +106,12 @@ Tracker-entered records are authoritative. Never alter or delete them merely to 
 
 Supabase's database security advisor has no errors and no remaining database-policy warnings. The sole remaining Auth warning is leaked-password protection, which Supabase restricts to Pro plans; the organization is on Free. Do not initiate a paid upgrade without explicit approval.
 
+## Overview Shipment Detail Modals (2026-09-03)
+
+- Each row in Overview > Shipment performance has a read-only `View details` control and a responsive native dialog.
+- The dialog shows the same separated product cost, operations, sales, and remaining-inventory figures, plus inventory reconciliation, product lines, ownership investment basis, and record counts.
+- Rows are linked to their source shipment by stable shipment ID; initial inventory uses the authoritative shipment total.
+- Implementation is isolated to `shipment-details.js`, `shipment-details.css`, a stable row data attribute, and one script include.
+- No Supabase, auth, realtime, storage, form, accounting-formula, or source-data behavior was changed.
+- Independent post-fix review passed after correcting authoritative inventory and stable row identity.
+
