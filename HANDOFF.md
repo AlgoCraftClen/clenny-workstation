@@ -2,6 +2,12 @@
 
 Updated: 2026-09-02
 
+## MODAL WORKSTATION EXPERIENCE
+
+The September 2 workstation redesign is presentation-only. `workstation-experience.css` adds a compact desktop control-room layout, responsive financial-position cards, focused modal views, and a playful Workstation Pulse. `workstation-experience.js` provides keyboard-accessible read-only modals plus encouragement and roast prompts.
+
+No Supabase request, authentication, synchronization, financial formula, migration, or production record path was changed. `index.html` only loads the new presentation script. The authoritative baseline remains 5 shipments, 46 operations, 20 sales, and 1,620 cans remaining in SHP #5.
+
 ## SHARED SECURITY AND SYNCHRONIZATION COMPLETED
 
 The approved cross-app blocker repair was deployed on 2026-09-02.
