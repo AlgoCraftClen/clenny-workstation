@@ -8,6 +8,12 @@ The September 2 workstation redesign is presentation-only. `workstation-experien
 
 No Supabase request, authentication, synchronization, financial formula, migration, or production record path was changed. `index.html` only loads the new presentation script. The authoritative baseline remains 5 shipments, 46 operations, 20 sales, and 1,620 cans remaining in SHP #5.
 
+### Review-loop correction
+
+The first deployed experience hid core overview blocks, obscured the dedicated two-partner excess planner, and replaced document scrolling with page-sized internal scrolling. The corrected version restores every overview block, makes `Excess planner` a first-class destination, and moves the original functional DOM nodes into bounded page tabs. Forms, planner inputs, calculations, and listeners are never cloned.
+
+Two independent read-only review loops rejected the repair until the functional and responsive requirements were satisfied. The final review passed desktop, tablet, and phone selectors; original-node preservation; both projected excess values; listener preservation; source integrity; and the prohibition on data, Supabase, auth, storage, network, migration, and formula changes.
+
 ## SHARED SECURITY AND SYNCHRONIZATION COMPLETED
 
 The approved cross-app blocker repair was deployed on 2026-09-02.
