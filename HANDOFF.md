@@ -123,3 +123,11 @@ Supabase's database security advisor has no errors and no remaining database-pol
 - The component derives only from the active shipment settlement and the existing local meeting draft. It does not create a withdrawal or write to Supabase.
 - Synchronization, authentication, Realtime, polling, forms, source mappings, and accounting settlement formulas remain unchanged.
 
+## Focused Operations Workspace (2026-09-10)
+
+- The Operations page now uses a compact summary pulse, searchable/filterable ledger, and eight-row pagination instead of rendering the entire ledger into the page.
+- The existing live operation form opens in a native modal. The original form nodes, validation, authenticated Supabase submit handler, and post-save refresh are preserved rather than duplicated.
+- Filters cover free-text search, shipment, and owner. Pagination is interface-only and recalculates after every synchronized render.
+- Summary totals separate approved business operations, shared business funds, separate personal money, and personal withdrawals using existing mapped operation fields.
+- No synchronization, database, authentication, accounting, or source-record behavior changed.
+
