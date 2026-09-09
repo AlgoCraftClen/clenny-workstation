@@ -131,3 +131,11 @@ Supabase's database security advisor has no errors and no remaining database-pol
 - Summary totals separate approved business operations, shared business funds, separate personal money, and personal withdrawals using existing mapped operation fields.
 - No synchronization, database, authentication, accounting, or source-record behavior changed.
 
+## Focused Sales Workspace (2026-09-10)
+
+- The Sales page now uses a revenue summary pulse, searchable/filterable ledger, and eight-row pagination instead of rendering the entire sales history into the page.
+- The existing live sale form opens in a native modal. Its original inventory validation, collector/payment fields, authenticated Supabase submit handler, and post-save refresh remain intact.
+- Filters cover free-text search, shipment, collector, and payment status. Pagination is interface-only and recalculates after synchronized renders.
+- Summary totals show total recorded sales, paid sales, sales marked unpaid/partial, and cans sold from existing mapped sale records.
+- No synchronization, database, authentication, inventory, settlement, or source-record behavior changed.
+

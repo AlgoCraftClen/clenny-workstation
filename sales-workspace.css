@@ -1,0 +1,246 @@
+#sales .page-head {
+  align-items: center;
+}
+
+.sales-add-button {
+  flex: 0 0 auto;
+}
+
+.sales-pulse {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 14px;
+  overflow: hidden;
+  border: 1px solid #dfe3eb;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.sales-pulse-item {
+  min-width: 0;
+  padding: 14px 16px;
+  border-right: 1px solid #e5e8ef;
+}
+
+.sales-pulse-item:first-child {
+  background: #182440;
+}
+
+.sales-pulse-item:last-child {
+  border-right: 0;
+}
+
+.sales-pulse-item span {
+  display: block;
+  color: #748097;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.sales-pulse-item:first-child span {
+  color: #b9c5df;
+}
+
+.sales-pulse-item strong {
+  display: block;
+  margin-top: 4px;
+  overflow-wrap: anywhere;
+  color: #17203a;
+  font: 800 20px/1.2 Manrope, sans-serif;
+}
+
+.sales-pulse-item:first-child strong {
+  color: #6ee7b7;
+}
+
+#sales .grid.dashboard {
+  display: block;
+}
+
+.sales-ledger {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sales-ledger-toolbar {
+  display: grid;
+  grid-template-columns: minmax(210px, 1fr) 150px 140px 150px;
+  gap: 10px;
+  padding: 12px 16px;
+  border-top: 1px solid #e5e8ef;
+  border-bottom: 1px solid #e5e8ef;
+  background: #f7f8fc;
+}
+
+.sales-ledger-toolbar input,
+.sales-ledger-toolbar select {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #d9dee7;
+  border-radius: 8px;
+  padding: 9px 10px;
+  background: #fff;
+  color: #17203a;
+  font: 600 12px Manrope, sans-serif;
+}
+
+.sales-ledger-toolbar input:focus-visible,
+.sales-ledger-toolbar select:focus-visible,
+.sales-page-button:focus-visible,
+.sales-dialog-close:focus-visible {
+  outline: 3px solid rgba(83, 103, 248, .24);
+  outline-offset: 2px;
+}
+
+.sales-table-window {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.sales-ledger table {
+  min-width: 820px;
+}
+
+.sales-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+  padding: 9px 16px;
+  border-top: 1px solid #e5e8ef;
+  background: #fff;
+}
+
+.sales-page-status {
+  color: #667085;
+  font-size: 11px;
+}
+
+.sales-page-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.sales-page-button {
+  min-width: 74px;
+  border: 1px solid #d9dee7;
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: #fff;
+  color: #344054;
+  cursor: pointer;
+  font: 700 11px Manrope, sans-serif;
+}
+
+.sales-page-button:hover:not(:disabled) {
+  border-color: #8f9cff;
+  color: #4356db;
+}
+
+.sales-page-button:disabled {
+  cursor: not-allowed;
+  opacity: .4;
+}
+
+.sales-entry-dialog {
+  width: min(720px, calc(100vw - 24px));
+  max-width: 720px;
+  max-height: min(88dvh, 780px);
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #dfe3eb;
+  border-radius: 18px;
+  background: #fff;
+  color: #17203a;
+  box-shadow: 0 32px 90px rgba(9, 16, 36, .3);
+}
+
+.sales-entry-dialog::backdrop {
+  background: rgba(9, 16, 36, .6);
+  backdrop-filter: blur(7px);
+}
+
+.sales-entry-dialog .sales-entry-card {
+  max-height: min(88dvh, 780px);
+  margin: 0;
+  overflow-y: auto;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.sales-entry-dialog .card-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+}
+
+.sales-dialog-close {
+  width: 34px;
+  height: 34px;
+  margin-left: auto;
+  border: 1px solid #d9dee7;
+  border-radius: 8px;
+  background: #fff;
+  color: #344054;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+@media (max-width: 900px) {
+  .sales-ledger-toolbar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  #sales .page-head {
+    display: grid;
+    gap: 12px;
+  }
+
+  .sales-add-button {
+    width: 100%;
+  }
+
+  .sales-pulse {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sales-pulse-item:nth-child(2) {
+    border-right: 0;
+  }
+
+  .sales-pulse-item:nth-child(-n+2) {
+    border-bottom: 1px solid #e5e8ef;
+  }
+}
+
+@media (max-width: 520px) {
+  .sales-ledger-toolbar,
+  .sales-pulse {
+    grid-template-columns: 1fr;
+  }
+
+  .sales-pulse-item {
+    border-right: 0;
+    border-bottom: 1px solid #e5e8ef;
+  }
+
+  .sales-pulse-item:last-child {
+    border-bottom: 0;
+  }
+
+  .sales-pagination {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .sales-page-actions,
+  .sales-page-button {
+    width: 100%;
+  }
+}
