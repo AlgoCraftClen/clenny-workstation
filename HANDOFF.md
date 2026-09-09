@@ -123,11 +123,3 @@ Supabase's database security advisor has no errors and no remaining database-pol
 - The component derives only from the active shipment settlement and the existing local meeting draft. It does not create a withdrawal or write to Supabase.
 - Synchronization, authentication, Realtime, polling, forms, source mappings, and accounting settlement formulas remain unchanged.
 
-## Capital Shipment History (2026-09-10)
-
-- The Capital page has a shipment selector with Previous and Next controls.
-- The newest shipment remains the only active meeting-planning context. Selecting an earlier shipment hides the planner and shows a read-only capital snapshot instead.
-- Historical snapshots derive from the same `trackerSettlement` result and shared shipment records, showing product cost, approved operations, recorded sales, remaining inventory, ownership, partner rolled capital, and company reserve.
-- The all-shipment capital comparison table remains visible in both active and historical modes.
-- The history selection is interface state only. It does not write to local storage or Supabase and does not change the active shipment used by forms, synchronization, or projections.
-
