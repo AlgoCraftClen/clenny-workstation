@@ -115,3 +115,11 @@ Supabase's database security advisor has no errors and no remaining database-pol
 - No Supabase, auth, realtime, storage, form, accounting-formula, or source-data behavior was changed.
 - Independent post-fix review passed after correcting authoritative inventory and stable row identity.
 
+## Clenny Cash Handover Plan (2026-09-09)
+
+- The next-shipment meeting planner now shows projected business cash, Clenny's selected stock reserve, Clenny's additional profit available, and total cash to hand over after that profit.
+- Formula: projected business cash = Clenny projected payout + Clanny projected payout + company revenue; Clenny profit = max(0, Clenny payout - Clenny selected reserve); cash to hand over = projected business cash - Clenny profit.
+- Currency results are rounded explicitly to cents. If Clenny's selected stock exceeds his projected payout, the plan shows the shortage and makes no profit available.
+- The component derives only from the active shipment settlement and the existing local meeting draft. It does not create a withdrawal or write to Supabase.
+- Synchronization, authentication, Realtime, polling, forms, source mappings, and accounting settlement formulas remain unchanged.
+
